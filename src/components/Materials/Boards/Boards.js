@@ -27,6 +27,7 @@ const Boards = () => {
             length: data[key].ProductLength,
             name: data[key].ProductName,
             price: data[key].ProductPrice,
+            secondPrice: data[key].ProductComparsionPrice,
             bredd: data[key].ProductBredd,
             price1: data[key].ProductPrice_Ed_izm,
             price2: data[key].ProductComparsionPrice_Ed_izm,

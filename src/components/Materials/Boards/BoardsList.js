@@ -10,6 +10,7 @@ const BoardsList = (props) => {
           article={board.article}
           length={board.length}
           price={board.price}
+          secondPrice = {board.secondPrice}
           bredd={board.bredd}
           price1={board.price1}
           price2={board.price2}

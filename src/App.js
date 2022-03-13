@@ -24,7 +24,6 @@ function App() {
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
           <div>
-            <Link to="/boards">Boards</Link>
             <Link to="/">Home</Link>
           </div>
           <Routes>
