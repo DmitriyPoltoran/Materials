@@ -1,5 +1,7 @@
 import { useState, Fragment, useCallback, useEffect } from "react";
+import Card from "../../UI/Card";
 import BoardsList from "./BoardsList";
+import classes from './Boards.module.css'
 
 const Boards = () => {
   const [boards, setBoards] = useState([]);
@@ -34,18 +36,6 @@ const Boards = () => {
           })
       }
       console.log(data)
-    //   const transformedBoards = data.results.map((boardData) => {
-    //     return {
-    //       id: boardData.ProductId,
-    //       article: boardData.ProductArtikle,
-    //       length: boardData.ProductLength,
-    //       name: boardData.ProductName,
-    //       price: boardData.ProductPrice,
-    //       bredd: boardData.ProductBredd,
-    //       price1: boardData.ProductPrice_Ed_izm,
-    //       price2: boardData.ProductComparsionPrice_Ed_izm,
-    //     };
-    //   });
       setBoards(loadedBoards);
     } catch (error) {
       setError(error.message);
@@ -68,14 +58,11 @@ const Boards = () => {
   }
 
   if (isLoading) {
-    content = <p>Loading...</p>;
+    content = <p className={classes.content}>Loading...</p>;
   }
   return (
     <Fragment>
-        <section>
-        <button onClick={fetchBoardsHandler}>Fetch Movies</button>
-      </section>
-      <section>{content}</section>
+      <Card>{content}</Card>
     </Fragment>
   );
 };
