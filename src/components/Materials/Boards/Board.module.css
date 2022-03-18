@@ -1,8 +1,8 @@
 .board {
   margin: 1rem;
-  background-color: #8a2b06;
+  background-color: gray;
   width: 250px;
-  height: 500px;
+  height: auto;
   text-align: center;
   border-radius: 7px;
   color: white;
@@ -11,6 +11,7 @@
 .board img {
   width: 250px;
   height: 250px;
+  border: solid black;
 }
 
 .board table td {
